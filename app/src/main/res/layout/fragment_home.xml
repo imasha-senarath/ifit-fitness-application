@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundSecondaryColor"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- ###### start of calories summary card ###### -->
+            <LinearLayout
+                android:id="@+id/home_summary_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imagefView7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/summary_color_icon" />
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="Summary"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_summary_card_diary_button"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/button_style_04"
+                        android:text="Diary"
+                        android:textAllCaps="false"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:clickable="false"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp">
+
+                    <ProgressBar
+                        android:id="@+id/home_summary_card_calories_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/progressbar_styles_01" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/home_summary_card_calories_bar"
+                        android:layout_alignTop="@id/home_summary_card_calories_bar"
+                        android:layout_alignRight="@id/home_summary_card_calories_bar"
+                        android:layout_alignBottom="@id/home_summary_card_calories_bar"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/home_summary_card_final_calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="--"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="60sp" />
+
+                        <TextView
+                            android:id="@+id/home_summary_card_TDEE_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="--"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tedxtView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Calories"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_summary_card_TDEE_02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="--"
+                            android:textAlignment="center"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Goal"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_summary_card_food_calories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="--"
+                            android:textAlignment="center"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Food"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="+"
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_summary_card_workout_calories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="--"
+                            android:textAlignment="center"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Workout"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="="
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/home_summary_card_calories_remaining"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="--"
+                            android:textAlignment="center"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Remaining"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/home_summary_card_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third_container"
+                    android:layout_marginBottom="10dp"
+                    android:text="Try to get food within daily calorie intake."
+                    android:textAlignment="center"
+                    android:textColor="@color/SecondaryTextColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- ###### end of summary card ###### -->
+
+
+            <!-- ###### start of food card ###### -->
+
+
+            <LinearLayout
+                android:id="@+id/home_food_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/food_color_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="Food"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/home_food_card_consumed_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/texdtView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="Consumed Calories"
+                        android:textAlignment="center"
+                        android:textColor="@color/SecondaryTextColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:id="@+id/add_buttons_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/home_food_card_breakfast_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/breakfast_icon" />
+
+                        <TextView
+                            android:id="@+id/textView47"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Breakfast"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColor" />
+
+
+                    <LinearLayout
+                        android:id="@+id/home_food_card_lunch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/lunch_icon" />
+
+                        <TextView
+                            android:id="@+id/textView48"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Lunch"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColor" />
+
+
+                    <LinearLayout
+                        android:id="@+id/home_food_card_dinner_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/dinner_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Dinner"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColor" />
+
+                    <LinearLayout
+                        android:id="@+id/home_food_card_snack_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imagdetButton2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/snack_icon" />
+
+                        <TextView
+                            android:id="@+id/textViedw49"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Snack"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ###### end of food card ###### -->
+
+
+            <!-- ###### start of workout card ###### -->
+            <LinearLayout
+                android:id="@+id/home_workout_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/workout_color_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="Workout"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/home_workout_card_burned_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="Burned Calories"
+                        android:textAlignment="center"
+                        android:textColor="@color/SecondaryTextColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/home_workout_card_walking_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/walking_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Walking"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="@color/LineColor" />
+
+
+                    <LinearLayout
+                        android:id="@+id/home_workout_card_running_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imageButtton2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/running_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Running"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColor" />
+
+
+                    <LinearLayout
+                        android:id="@+id/home_workout_card_cycling_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imagetButton2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/cycling_icon" />
+
+                        <TextView
+                            android:id="@+id/textView49"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="Cycling"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColor" />
+
+                    <LinearLayout
+                        android:id="@+id/home_workout_card_more_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:clickable="false"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/more_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="More"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- ###### end of workout card ###### -->
+
+
+            <!-- ###### start of the water card ###### -->
+            <LinearLayout
+                android:id="@+id/home_water_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/water_color_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="Water"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/home_water_card_glasses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:gravity="end"
+                            android:text="00"
+                            android:textAlignment="center"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Current Glasses"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/home_water_card_glasses_minus_button"
+                            android:layout_width="46dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:alpha="0.7"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/minus_icon" />
+
+                        <ImageButton
+                            android:id="@+id/home_water_card_glasses_add_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:alpha="0.7"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/add_icon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/home_water_card_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="It is important to drink minimum 8 glasses per day. Don't forget! "
+                    android:textAlignment="center"
+                    android:textColor="@color/SecondaryTextColor" />
+
+
+            </LinearLayout>
+            <!-- ###### end of the water card ###### -->
+
+
+            <!-- ###### start of the weight card ###### -->
+            <LinearLayout
+                android:id="@+id/home_weight_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imaggdefView7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/weight_color_icon" />
+
+                    <TextView
+                        android:id="@+id/texdtView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="Weight"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/home_weight_card_goal_button"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="100dp"
+                        android:background="@drawable/button_style_04"
+                        android:text="Set Goal"
+                        android:textAllCaps="false"
+                        android:textColor="@color/PrimaryTextColor" />
+
+
+                    <Button
+                        android:id="@+id/home_weight_card_record_button"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/button_style_04"
+                        android:text="Record"
+                        android:textAllCaps="false"
+                        android:textColor="@color/PrimaryTextColor" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/home_weight_card_current_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:gravity="end"
+                                android:text="--"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/PrimaryTextColor"
+                                android:textSize="36sp" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="KG"
+                                android:textColor="@color/SecondaryTextColor"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/texddtView35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Current Weight"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/home_weight_card_weight_minus_button"
+                            android:layout_width="46dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:alpha="0.7"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/minus_icon" />
+
+                        <ImageButton
+                            android:id="@+id/home_weight_card_weight_add_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:alpha="0.7"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/add_icon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_weight_card_goal_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/home_weight_card_goal_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:gravity="end"
+                                android:text="--"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/PrimaryTextColor"
+                                android:textSize="36sp" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="KG"
+                                android:textColor="@color/SecondaryTextColor"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/texddgtView35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="Goal Weight"
+                            android:textAlignment="center"
+                            android:textColor="@color/SecondaryTextColor"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/home_weight_card_weight_goal_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="2"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progressbar_styles_02" />
+
+                </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/home_weight_card_goal_complete_description"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Congratulations, You have achieved your previous weight loss goal."
+                            android:textAlignment="center" />
+
+            </LinearLayout>
+            <!-- ###### end of the weight card ###### -->
+
+
+            <!-- ###### start of the BMI card ###### -->
+            <LinearLayout
+                android:id="@+id/home_bmi_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_style_01"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imaghefView7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/bmi_color_icon" />
+
+                    <TextView
+                        android:id="@+id/texhtView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:text="BMI"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/LineColor" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/home_bmi_card_bmi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="--"
+                        android:textAlignment="center"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/texdtrView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="Body Mass Index"
+                        android:textAlignment="center"
+                        android:textColor="@color/SecondaryTextColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/second_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/home_bmi_card_under_weight_status"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/bmi_underweight_status" />
+
+                    <ImageView
+                        android:id="@+id/home_bmi_card_healthy_weight_status"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/bmi_healthyweight_status" />
+
+                    <ImageView
+                        android:id="@+id/home_bmi_card_over_weight_status"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/bmi_overweight_status" />
+
+                    <ImageView
+                        android:id="@+id/home_bmi_card_obesity_status"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.7"
+                        app:srcCompat="@drawable/bmi_obesity_status" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/third_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_container"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <View
+                        android:id="@+id/bmibar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="#4c6c93" />
+
+                    <View
+                        android:id="@+id/bmibar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="#74dd78" />
+
+                    <View
+                        android:id="@+id/bmibar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="#feb546" />
+
+                    <View
+                        android:id="@+id/bmibar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="#ea444e" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/home_bmi_card_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third_container"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="---"
+                    android:textAlignment="center"
+                    android:textColor="@color/SecondaryTextColor"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <!-- ###### end of the BMI card ###### -->
+
+
+            <!-- ###### start of the achievements card ###### -->
+            <!-- ###### end of the achievements card ###### -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

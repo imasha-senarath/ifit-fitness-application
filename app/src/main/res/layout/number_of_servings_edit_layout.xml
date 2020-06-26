@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/BackgroundPrimaryColor"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Serving Size"
+            android:textColor="@color/PrimaryTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/number_of_servings_dialog_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_style_01"
+            android:ems="10"
+            android:hint="How much?"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/PrimaryTextColor"
+            android:textColorHint="@color/HintTextColor" />
+
+        <TextView
+            android:id="@+id/number_of_servings_dialog_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Please enter the number of servings."
+            android:textAlignment="center"
+            android:textColor="@color/ErrorTextColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/number_of_servings_dialog_cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@android:string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:alpha="0.3"
+                android:background="@color/IconColor" />
+
+            <Button
+                android:id="@+id/number_of_servings_dialog_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="SUBMIT"
+                android:textAllCaps="false"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ToolBarColor"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:orientation="horizontal"
+    app:contentInsetStartWithNavigation="0dp"
+    app:titleTextColor="@color/LightTextColor">
+
+    <ImageView
+        android:id="@+id/toolbar_logo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/logoimage"
+        android:tint="@color/LightTextColor"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/toolbar_logo_text"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logotext"
+        android:tint="@color/LightTextColor"
+        android:visibility="gone"/>
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/toolbar_user_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/default_user_image"
+        android:layout_gravity="right">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <ImageButton
+        android:id="@+id/toolbar_profile_edit_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/profile_edit_icon"
+        android:background="@null"
+        android:tint="@color/LightTextColor"
+        android:scaleType="fitCenter"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"/>
+
+
+
+</androidx.appcompat.widget.Toolbar>

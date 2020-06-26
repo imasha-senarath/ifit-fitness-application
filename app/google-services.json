@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "619480489868",
+    "firebase_url": "https://ifit-coach.firebaseio.com",
+    "project_id": "ifit-coach",
+    "storage_bucket": "ifit-coach.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619480489868:android:74f76a66aaff135cb900a9",
+        "android_client_info": {
+          "package_name": "com.example.ifitcoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619480489868-brunajohser7hc0daolahs5c72646f12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ifitcoach",
+            "certificate_hash": "151fe73417b3c8d74727567be3485bc6493bf80f"
+          }
+        },
+        {
+          "client_id": "619480489868-3fhaqg09eadnipqa0rse8091dimn41lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyX0AFVXZODQ75TMiU2CdqkoQys2zBce0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619480489868-3fhaqg09eadnipqa0rse8091dimn41lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        navigation bar style
+        <item name="android:navigationBarColor">@color/SystemNavigationBarColor</item>
+
+        status bar style
+        <item name="android:statusBarColor">@color/StatusBarColor</item>
+
+
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- Text input error color -->
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/ErrorTextColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

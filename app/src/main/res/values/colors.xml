@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#007CBB</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#007CBB</color>
+
+
+    <!-- Dark UI Colors -->
+    <!--
+   <color name="DialogColor">#232323</color>
+   <color name="CardColor">#232323</color>
+   <color name="BackgroundColor">#181818</color>
+
+   <color name="BackgroundPrimaryColor">#000000</color>
+   <color name="BackgroundSecondaryColor">#1c1c1c</color>
+   <color name="BackgroundDarkColor">#181818</color>
+
+   <color name="ToolBarColor">#0f0f0f</color>
+   <color name="AppNavigationBarColor">#0f0f0f</color>
+   <color name="StatusBarColor">#000000</color>
+   <color name="SystemNavigationBarColor">#000000</color>
+
+   <color name="IconColor">#80FFFFFF</color>
+   <color name="LineColor">#1AFFFFFF</color>
+   <color name="ProgressDialogColor">#424242</color>
+
+   <color name="TitleTextColor">#FFFFFF</color>
+   <color name="PrimaryTextColor">#FFFFFFFF</color>
+   <color name="SecondaryTextColor">#B3FFFFFF</color>
+   <color name="LightTextColor">#000000</color>
+   <color name="HintTextColor">#80FFFFFF</color>
+   <color name="DisabledTextColor">#80FFFFFF</color>
+   <color name="ErrorTextColor">#CF6679</color>
+   <color name="WarningTextColor">#CF6679</color>
+   <color name="ButtonTextColor">#FFFFFFFF</color>-->
+   <!-- Dark UI Colors -->
+
+
+
+    <!-- Light UI Colors-->
+        <color name="BackgroundPrimaryColor">#ffffff</color>
+        <color name="BackgroundSecondaryColor">#e7e7e7</color>
+        <color name="BackgroundDarkColor">#181818</color>
+
+        <color name="ToolBarColor">#005681</color>
+        <color name="StatusBarColor">#005681</color>
+        <color name="AppNavigationBarColor">#ffffff</color>
+        <color name="SystemNavigationBarColor">#ffffff</color>
+
+        <color name="IconColor">#838383</color>
+        <color name="LineColor">#e0e0e0</color>
+
+        <color name="TitleTextColor">#000000</color>
+        <color name="PrimaryTextColor">#353535</color>
+        <color name="SecondaryTextColor">#B3353535</color>
+        <color name="LightTextColor">#ffffff</color>
+        <color name="HintTextColor">#80353535</color>
+        <color name="ErrorTextColor">#B00020</color>
+        <color name="WarningTextColor">#B00020</color>
+        <color name="ButtonTextColor">#FFFFFFFF</color>
+        <!-- Light UI Colors-->
+</resources>

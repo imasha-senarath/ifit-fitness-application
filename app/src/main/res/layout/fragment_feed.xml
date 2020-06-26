@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FeedFragment"
+    android:background="@color/BackgroundSecondaryColor">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/feed_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/BackgroundPrimaryColor"
+                android:drawableStart="@drawable/search_icon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/PrimaryTextColor"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Search for a People"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:clipToPadding="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/feed_add_new_post_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        app:fabSize="normal"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/create_post_button_icon"
+        android:elevation="20dp"
+        android:tint="@color/ButtonTextColor"
+        app:borderWidth="0dp"/>
+
+     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

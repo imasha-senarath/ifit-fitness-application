@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundPrimaryColor"
+    tools:context=".AccountTypeActivity">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineColor"
+        android:layout_below="@id/main_toolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/main_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+
+                <RadioButton
+                    android:id="@+id/account_type_buy_a_service_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="FIND A SERVICE"
+                    android:textSize="18sp"
+                    android:drawableEnd="@drawable/small_right_arrow"
+                    android:drawableTint="@color/IconColor"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/main_toolbar"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/LineColor" />
+
+                <RadioButton
+                    android:id="@+id/account_type_sell_a_service_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="BECOME A SELLER"
+                    android:textSize="18sp"
+                    android:drawableEnd="@drawable/small_right_arrow"
+                    android:drawableTint="@color/IconColor"/>
+
+
+            <Spinner
+                android:id="@+id/account_type_position"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_style_01" />
+
+            <TextView
+                android:id="@+id/account_type_error_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Please select the account type."
+                android:textAlignment="center"
+                android:textColor="@color/WarningTextColor"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/account_type_next_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_style_01"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/ButtonTextColor"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/account_type_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:text="Already have an account? LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateServiceActivity"
+    android:background="@color/BackgroundPrimaryColor">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="01. Enter your service title"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_service_service_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:hint="Ex- I will create diet plans."
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor" />
+
+            <TextView
+                android:id="@+id/create_service_service_title_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Please enter service title."
+                android:textColor="@color/WarningTextColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/trextView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="02. Enter your service summary description."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_service_service_summary_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="The key functions of your service."
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor" />
+
+            <TextView
+                android:id="@+id/create_service_service_summary_description_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Please enter service summary description."
+                android:textColor="@color/WarningTextColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/trextVtiew43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="03. Enter your service full description."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_service_service_full_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Briefly explain your service."
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor" />
+
+            <TextView
+                android:id="@+id/create_service_service_full_description_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Please enter service full description."
+                android:textColor="@color/WarningTextColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="04. Enter a search keyword."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_service_service_search_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:hint="Ex- diet plan"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor" />
+
+            <TextView
+                android:id="@+id/create_service_service_search_keyword_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Please enter a search keyword."
+                android:textColor="@color/WarningTextColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/trextVstiew43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp"
+                android:text="04. Add maximum three photos. The first photo will use as the preview photo (The first photo is required)"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/create_service_service_image_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="You should add at least first photo."
+                android:textColor="@color/WarningTextColor"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/create_service_service_first_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_photo_icon" />
+
+                <ImageButton
+                    android:id="@+id/create_service_service_second_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_photo_icon" />
+
+                <ImageButton
+                    android:id="@+id/create_service_service_third_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add_photo_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="*You are not able to change the service details after submit."
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/create_service_service_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_style_01"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/ButtonTextColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

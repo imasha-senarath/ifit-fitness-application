@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateFoodActivity"
+    android:background="@color/BackgroundPrimaryColor">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_toolbar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Enter name of the food."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:hint="Food name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="Enter serving size."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/create_food_servingSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_style_01"
+                    android:ems="10"
+                    android:hint="Serving size"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="10dp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textColorHint="@color/HintTextColor" />
+
+                <EditText
+                    android:id="@+id/create_food_servingSizeUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_style_01"
+                    android:ems="10"
+                    android:hint="Serving unit"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textColorHint="@color/HintTextColor" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="Enter food calories per your serving size."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/create_food_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_style_01"
+                android:ems="10"
+                android:hint="Food calories"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="10dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:text="Enter food nutritions."
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/create_food_carbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_style_01"
+                    android:ems="10"
+                    android:hint="Carbs (g)"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10dp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textColorHint="@color/HintTextColor" />
+
+                <EditText
+                    android:id="@+id/create_food_fat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_style_01"
+                    android:ems="10"
+                    android:hint="Fat (g)"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10dp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textColorHint="@color/HintTextColor" />
+
+                <EditText
+                    android:id="@+id/create_food_protien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_style_01"
+                    android:ems="10"
+                    android:hint="Protein (g)"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10dp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textColorHint="@color/HintTextColor" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/create_food_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="All Fields are Required."
+                android:textAlignment="center"
+                android:textColor="@color/WarningTextColor" />
+
+            <Button
+                android:id="@+id/create_food_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_style_01"
+                android:text="Create Food"
+                android:textAllCaps="false"
+                android:textColor="@color/ButtonTextColor"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

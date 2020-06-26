@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindActivity"
+    android:background="@color/BackgroundSecondaryColor">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/search_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_toolbar"
+        android:background="@color/BackgroundPrimaryColor"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/find_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/BackgroundPrimaryColor"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/PrimaryTextColor"
+            android:ems="10"
+            android:hint="Search..."
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/PrimaryTextColor"
+            android:textColorHint="@color/HintTextColor"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/LineColor" />
+
+        <Spinner
+            android:id="@+id/find_search_type"
+            android:layout_width="110dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_below="@id/search_bar_container"/>
+
+
+</RelativeLayout>

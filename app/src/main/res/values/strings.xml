@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">iFit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="position">
+        <item> Select Your Position </item>
+        <item> Fitness Trainer </item>
+        <item> Nutritionist </item>
+        <item> Physical Therapist </item>
+        <item> Gym Assistant </item>
+        <item> Massage Therapist </item>
+    </string-array>
+
+    <string-array name="searchType">
+        <item> People </item>
+        <item> Service </item>
+    </string-array>
+
+</resources>

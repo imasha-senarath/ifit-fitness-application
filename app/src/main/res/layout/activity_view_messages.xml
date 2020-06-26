@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewMessagesActivity"
+    android:background="@color/BackgroundSecondaryColor">
+
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        android:paddingBottom="70dp"
+        android:clipToPadding="false"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom">
+
+            <EditText
+                android:id="@+id/view_msg_msg_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_style_02"
+                android:ems="10"
+                android:hint="Type a Message..."
+                android:maxLines="4"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/PrimaryTextColor"
+                android:textColorHint="@color/HintTextColor"
+                android:textSize="18sp"
+                app:borderWidth="0dp" />
+
+            <ImageButton
+                android:id="@+id/view_msg_msg_send_button"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/view_msg_msg_input"
+                android:layout_alignBottom="@id/view_msg_msg_input"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/send_button_icon" />
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
