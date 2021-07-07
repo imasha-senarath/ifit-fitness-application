@@ -54,7 +54,7 @@ public class PostActivity extends AppCompatActivity
 
     String intentFrom, intentUserID;
 
-    String retrieveUserName, retrieveUserPosition, retrieveUserImage;
+    String retrieveUserName, retrieveUserPosition, retrieveUserImage="";
 
     private FloatingActionButton createPostsBtn;
 
@@ -276,7 +276,7 @@ public class PostActivity extends AppCompatActivity
 
 
 
-                /* post description */
+                /*  post description */
                 postsViewHolder.postdescription.setVisibility(View.GONE);
                 String tempPostDescription = userPosts.getPostdescription();
                 if(!(TextUtils.isEmpty(tempPostDescription)))
@@ -285,8 +285,7 @@ public class PostActivity extends AppCompatActivity
                     postsViewHolder.postdescription.setVisibility(View.VISIBLE);
                 }
 
-
-                /* post image */
+                 /* post image */
                 postsViewHolder.postfirstimage.setVisibility(View.GONE);
                 final String tempPostImage = userPosts.getPostfirstimage();
                 if(!(TextUtils.isEmpty(tempPostImage)))
@@ -294,7 +293,6 @@ public class PostActivity extends AppCompatActivity
                     Picasso.with(PostActivity.this).load(userPosts.getPostfirstimage()).into(postsViewHolder.postfirstimage);
                     postsViewHolder.postfirstimage.setVisibility(View.VISIBLE);
                 }
-
 
                 /* count post images */
                 final String tempPostSecondImage = userPosts.getPostsecondimage();
@@ -316,9 +314,8 @@ public class PostActivity extends AppCompatActivity
                 postsViewHolder.posttime.setText(userPosts.getPosttime());
 
 
-
-                Picasso.with(PostActivity.this).load(R.drawable.default_user_image).into(postsViewHolder.postuserimage);
-                if(!(retrieveUserImage.equals("")))
+                //Picasso.with(PostActivity.this).load(R.drawable.default_user_image).into(postsViewHolder.postuserimage);
+                if(!retrieveUserImage.isEmpty())
                 {
                     Picasso.with(PostActivity.this).load(retrieveUserImage).placeholder(R.drawable.default_user_image).into(postsViewHolder.postuserimage);
                 }
@@ -328,6 +325,7 @@ public class PostActivity extends AppCompatActivity
                 {
                     postsViewHolder.postusername.setText(retrieveUserName);
                 }
+                
 
                 postsViewHolder.postuserposition.setVisibility(View.GONE);
                 if(!TextUtils.isEmpty(retrieveUserPosition))
