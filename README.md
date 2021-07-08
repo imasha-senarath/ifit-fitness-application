@@ -1,5 +1,7 @@
 # Fitness Android Application - iFit
 
+[iFit Web Site](https://ifit-coach.netlify.app/)
+
 Today, people spend more money on non-communicable diseases more than any other. Unhealthy diet and physical inactivity are primary factors for non-communicable diseases. 
 But most of the people’s lives are so busy today. In that case, people don’t have enough time to consider their health & fitness. So, this project involved developing an 
 android application that can help to maintaining health and increase fitness level, because most people have their mobile phones on them always. So, the mobile application 
@@ -42,6 +44,4 @@ Google firebase database is the database that used to this application. But fire
 ## Application Screenshots
 
 ![screenshots](images/screenshots.png)
-
-
 
