@@ -325,7 +325,7 @@ public class PostActivity extends AppCompatActivity
                 {
                     postsViewHolder.postusername.setText(retrieveUserName);
                 }
-                
+
 
                 postsViewHolder.postuserposition.setVisibility(View.GONE);
                 if(!TextUtils.isEmpty(retrieveUserPosition))
