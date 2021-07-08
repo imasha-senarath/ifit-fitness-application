@@ -25,7 +25,23 @@ and choose the most suitable technologies for this project. Below describes the 
 - **Java** – Java and Kotlin are official languages of android development. Both are support to android studio. But in the android development, the most popular option is java.  Also, java applications are lighter and more compact compare to Kotlin application. Development of the Firebase database connection more suitable with java language because there was greater support and help documentation for Java than Kotlin. So, the project chose java language as the primary backend language.
 - **Firebase** Real-time Database – Firebase is mobile and web app development platform by google. It provides a lot of services. The firebase real-time database is a NoSQL cloud-hosted database for web application and mobile application.  The project chose the firebase real-time database as an application database. It was chosen because it has more advantages and easy to use than SQL databases. Mainly it is a totally free database. In the firebase database, data is stored as JSON and sync data in real-time across every connected device. The firebase database can access directly from a mobile application or web application without application server. 
 - **Firebase Storage** – This application needs store images and share with all users that use this application. So, the project chose firebase storage. Firebase storage is a part of the firebase real-time database. It is designed to easily store images, videos etc. 
-- **XML** – XML stands for Extensible Markup Language.  Basically, it mainly uses for user interface and layout design. But there are many XML file types for different proposes.  Layout XML files, manifest XML file, strings XML files, styles XML files, drawable XML files and animation XML files are XML files that I used for this project. So, the project chose xml for frontend design. 
+- **XML** – XML stands for Extensible Markup Language.  Basically, it mainly uses for user interface and layout design. But there are many XML file types for different proposes.  Layout XML files, manifest XML file, strings XML files, styles XML files, drawable XML files and animation XML files are XML files that I used for this project. So, the project chose xml for frontend design.
+
+## System Architecture
+
+The diagram below shows the basic architecture of the system. It represents the main components and how they are connected. The main components are as follows: Application, firebase server, firebase database and firebase storage.
+
+![system_architecture](images/system_architecture.png)
+
+## Database Design
+
+Google firebase database is the database that used to this application. But firebase is a NoSQL database. It is a JSON database and there are no tables or joins. So, firebase database was not directly applicable to the entity relationship diagram. Therefore, the firebase database structure (JSON Structure) should convert to the SQL structure with primary and foreign keys. The diagram below shows the converted structure of the firebase database.
+
+![database_design](images/database_design.png)
+
+## Application Screenshots
+
+![screenshots](images/screenshots.png)
 
 
 
