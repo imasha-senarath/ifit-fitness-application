@@ -14,7 +14,6 @@ An android fitness application that can help to maintaining health and increase 
 [iFit Web Site](https://ifit-coach.netlify.app/)
 
 ## Screenshots
-![screenshots](screenshots/0.jpg)
 ![screenshots](screenshots/1.jpg)
 ![screenshots](screenshots/2.jpg)
 ![screenshots](screenshots/3.jpg)
